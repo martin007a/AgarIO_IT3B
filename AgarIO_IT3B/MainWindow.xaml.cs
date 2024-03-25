@@ -16,30 +16,44 @@ namespace AgarIO_IT3B
   /// </summary>
   public partial class MainWindow : Window
   {
+
     public MainWindow()
     {
-            
+
     }
+  
 
-    public void See()
-    {
-        double y = canvasGame.ActualHeight / 2;
-        double x = canvasGame.ActualWidth / 2;
-
-        Player plar = new Player(Brushes.Red, "Arnold") 
-        { 
-            Location = new Point(x, y),
-        };    
-        Ellipse eli = new Ellipse() 
+        public void See()
         {
-            Fill = plar.Color,
-            Width = plar.Size,
-            Height = plar.Size,
-        };
-        canvasGame.Children.Add(eli);
-        Canvas.SetLeft(eli, plar.Location.X);
-        Canvas.SetTop(eli, plar.Location.Y);
-    }
+            double y = canvasGame.ActualHeight / 2;
+            double x = canvasGame.ActualWidth / 2;
+
+            Player plar = new Player(Brushes.Red, "Arnold") 
+            { 
+                Location = new Point(x, y),
+            };    
+            Ellipse eli = new Ellipse() 
+            {
+                Fill = plar.Color,
+                Width = plar.Size,
+                Height = plar.Size,
+            };
+            canvasGame.Children.Add(eli);
+            Canvas.SetLeft(eli, plar.Location.X);
+            Canvas.SetTop(eli, plar.Location.Y);
+            C
+        }
+        public void Move()
+        {
+            double X = Canvas.GetLeft(eli[0);
+
+            switch (e.Key)
+            {
+                case Key.Left:
+                
+
+            }
+        }
 
         private void canvasGame_Loaded(object sender, RoutedEventArgs e)
         {
