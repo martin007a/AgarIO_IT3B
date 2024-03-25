@@ -16,23 +16,23 @@ namespace AgarIO_IT3B
   /// </summary>
   public partial class MainWindow : Window
   {
+        double y;
+        double x;
+        Ellipse eli = new Ellipse();
 
     public MainWindow()
     {
 
     }
-  
-
         public void See()
         {
             double y = canvasGame.ActualHeight / 2;
             double x = canvasGame.ActualWidth / 2;
-
             Player plar = new Player(Brushes.Red, "Arnold") 
             { 
                 Location = new Point(x, y),
             };    
-            Ellipse eli = new Ellipse() 
+            eli = new Ellipse() 
             {
                 Fill = plar.Color,
                 Width = plar.Size,
@@ -41,19 +41,31 @@ namespace AgarIO_IT3B
             canvasGame.Children.Add(eli);
             Canvas.SetLeft(eli, plar.Location.X);
             Canvas.SetTop(eli, plar.Location.Y);
-            C
         }
         public void Move()
         {
-            double X = Canvas.GetLeft(eli[0);
+            Canvas.GetLeft(eli);
+            Canvas.GetTop(eli);
 
-            switch (e.Key)
+
+
+            switch ()
             {
                 case Key.Left:
-                
-
+                    x = -10;
+                    break;
+                case Key.Right:
+                    x = +10;
+                    break;
+                case Key.Up:
+                    y = -10;
+                    break;
+                case Key.Down:
+                    y = +10;
+                    break;
             }
         }
+        
 
         private void canvasGame_Loaded(object sender, RoutedEventArgs e)
         {
