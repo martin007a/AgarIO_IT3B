@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgarIO_IT3B"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown">
     <Grid>
-        <Canvas Name="canvasGame" Background="White" Loaded="canvasGame_Loaded"/>
+        <Canvas Name="canvasGame" Background="Wheat" Loaded="canvasGame_Loaded" Margin="0,0,182,10"/>
+        <Label Name="Lbl" HorizontalAlignment="Left" Margin="623,0,0,0" VerticalAlignment="Center" Height="414" Width="167"/>
     </Grid>
 </Window>

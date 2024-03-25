@@ -42,34 +42,41 @@ namespace AgarIO_IT3B
             Canvas.SetLeft(eli, plar.Location.X);
             Canvas.SetTop(eli, plar.Location.Y);
         }
-        public void Move()
-        {
-            Canvas.GetLeft(eli);
-            Canvas.GetTop(eli);
-
-
-
-            switch ()
-            {
-                case Key.Left:
-                    x = -10;
-                    break;
-                case Key.Right:
-                    x = +10;
-                    break;
-                case Key.Up:
-                    y = -10;
-                    break;
-                case Key.Down:
-                    y = +10;
-                    break;
-            }
-        }
-        
+    
 
         private void canvasGame_Loaded(object sender, RoutedEventArgs e)
         {
             See();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            x = Canvas.GetLeft(eli);
+            y = Canvas.GetTop(eli);
+
+
+            switch (e.Key)
+            {
+                case Key.Left:
+                    x -= 10;
+                    break;
+                case Key.Right:
+                    x += 10;
+                    break;
+                case Key.Up:
+                    y -= 10;
+                    break;
+                case Key.Down:
+                    y += 10;
+                    break;
+            }
+            Canvas.SetLeft(eli, x);
+            Canvas.SetTop(eli, y);
+
+            Lbl.Content = x.ToString();
+            Lbl.Content += "\n";
+            Lbl.Content += y.ToString();
+
         }
     }
 }
