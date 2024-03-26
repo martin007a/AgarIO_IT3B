@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown">
     <Grid>
-        <Canvas Name="canvasGame" Background="Wheat" Loaded="canvasGame_Loaded" Margin="0,0,182,10"/>
-        <Label Name="Lbl" HorizontalAlignment="Left" Margin="623,0,0,0" VerticalAlignment="Center" Height="414" Width="167"/>
+        <Canvas Name="canvasGame" Background="Wheat" Loaded="canvasGame_Loaded" Margin="0,0,182,10" MouseMove="canvasGame_MouseMove_1"/>
+        <Label Name="Lbl" HorizontalAlignment="Left" Margin="633,0,0,0" VerticalAlignment="Center" Height="414" Width="167"/>
     </Grid>
 </Window>
